@@ -1,0 +1,68 @@
+<div class="mt-5 py-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="select">
+          <input type="text" [value]="searchQuery" [formControl]="orderSearch" class="form-control" [placeholder]="'orders.searchOrder' | translate">
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <h2 class="header-list" *ngIf='!isAdmin()'>{{'orders.ordersList' | translate}}</h2>
+        <h2 class="header-list" *ngIf='isAdmin()'>{{'orders.userOrders' | translate}} {{this.userName}} </h2>
+      </div>
+      <div class="col-md-3 text-right">
+        <button (click)="openNewOrderModal();" class="btn btn-success ml-1">{{'orders.add'|translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="">
+    <div class="row">
+      <div class="col-md-12">
+          <div *ngIf="!hasOrders()" class="alert alert-warning" role="5alert">
+              {{'orders.ordersNotFound' | translate}}
+            </div>
+        <div *ngIf="hasOrders()" class="table-responsive">
+          <table class="table table-md">
+            <thead>
+              <tr>
+                <th class="thead">{{'orders.id' | translate}}</th>
+                <th class="thead ">{{'orders.date' | translate}}</th>
+                <th class="thead">{{'orders.description' | translate}}</th>
+                <th class="thead text-center">{{'orders.IsConfirmed' | translate}}</th>
+                <th class="thead"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orders">
+                <td class="thead">{{order.id}} </td>
+                <td class="thead">{{ order.date | date: "dd.MM.y"}}</td>
+                <td class="thead">{{ order.description }}</td>
+                <td class="thead text-center">
+                  <span *ngIf="order.isConfirmed" class='fa fa-check'></span>
+                  <span *ngIf="!order.isConfirmed" class='fa fa-times'></span>
+                </td>
+
+
+                <td class="tbody nowrap text-right">
+                    <a [routerLink]="['/order/details/'+order.id]" class="btn btn-outline-warning ml-1 btn-sm">{{'global.details'|translate}}</a>
+                    <button (click)="openEditOrderModal(order);" class="btn btn-outline-primary ml-1 btn-sm">{{'global.edit'|translate}}</button>
+                    <button (click)="openConfirmOrderModal(order);" [disabled]="order.isConfirmed" class="btn btn-outline-success ml-1 btn-sm">{{'global.confirm'|translate}}</button>
+                    <button (click)="openArchiveOrderModal(order);"  class="btn btn-outline-danger ml-1 btn-sm">{{'global.delete'|translate}}</button>           
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-pagination class="text-right" *ngIf="hasOrders()" (changePagination)="onPaginationChange($event)" [itemsCount]="totalCount"></app-pagination>
+<app-new-order #newOrder></app-new-order>
+<app-order-edit #editOrder></app-order-edit>
+<app-order-confirm #confirmOrder></app-order-confirm>
+<app-order-archive #archiveOrder></app-order-archive>

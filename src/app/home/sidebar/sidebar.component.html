@@ -1,0 +1,59 @@
+<div class="left">
+    <div class="row logo pt-4 pb-5">
+      <a [routerLink]="['/home/homepage']" class="text-center">
+        <img src="../../../assets/smalllogo.png" class="w-75 h-100 mx-auto">
+      </a>
+      
+      </div>
+ 
+  <div class="row">
+    <div class="sidebar mx-auto text-uppercase p-4">
+      <a [routerLinkActive]="['active']" [routerLink]="['/home/about']" class="text-white">{{'nav.about' | translate}}</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="sidebar mx-auto text-uppercase p-4">
+      <a [routerLinkActive]="['active']" [routerLink]="['/home/help']" class="text-white">{{'nav.help' | translate}}</a>
+    </div>
+  </div>
+ 
+  
+<div *ngIf="isLogged()">
+  <div class="row" *ngIf="getUserRole() == 'Standard'">
+    <div class="sidebar mx-auto text-uppercase p-4" >
+      <a class="text-white" [routerLink]="['/user/orders/', this.getUserId()]">{{'orders.orders' | translate}}</a>
+    </div>
+  </div>
+  <div class="row" *ngIf="getUserRole() == 'Admin'">
+    <div class="sidebar mx-auto text-uppercase p-4" >
+      <a class="text-white" [routerLink]="['/order/orders-list/']">{{'orders.orders' | translate}}</a>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="sidebar mx-auto text-uppercase p-4">
+      <a [routerLink]="['/home/homepage']" (click)="logout()" class="text-white">{{'global.logout' |
+        translate}}</a>
+    </div>
+  </div>
+ 
+</div>
+<div *ngIf="!isLogged()">
+    <div class="row " >
+        <div class="sidebar mx-auto text-uppercase p-4">
+          <a [routerLink]="['/auth/login']" class="text-white">{{'auth.login.login' | translate}}</a>
+        </div>
+      
+      </div>
+      <div class="row " >
+      
+        <div class="sidebar mx-auto text-uppercase p-4">
+          <a [routerLink]="['/auth/register']" class="text-white">{{'auth.register.register' |
+            translate}}</a>
+      
+        </div>
+      </div>
+</div>
+
+
+</div>

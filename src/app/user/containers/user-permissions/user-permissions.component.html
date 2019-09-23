@@ -1,0 +1,24 @@
+<app-modal [id]="modalName">
+    <div class="modal-header">
+      <h1>{{'global.sure' | translate}}</h1>
+    </div>
+    <div *ngIf="currentUser" class="modal-body">
+      <p *ngIf="currentUser.permissions==1">{{'user.userPermissions.revokeInfo' | translate}}</p>
+      <p *ngIf="currentUser.permissions==0">{{'user.userPermissions.grantInfo' | translate}}</p>
+      <p>
+        {{'user.userActivate.userName' | translate}}:
+        <b>{{currentUser.name}} {{currentUser.surname}} </b>
+      </p>
+    </div>
+    <div class="error">
+      <div *ngIf="errorEvent" class="alert alert-danger mt-1" role="alert">
+        <span>{{'global.problemWithConnection' | translate}}</span>
+      </div>
+    </div>
+    <div *ngIf="currentUser" class="modal-footer">
+      <button *ngIf="currentUser.permissions==1" type="button" class="btn btn-warning" (click)="revokeUser()">{{'global.revoke' | translate}}</button>
+      <button *ngIf="currentUser.permissions==0" type="button" class="btn btn-warning" (click)="grantUser()">{{'global.grant' | translate}}</button>
+      <button type="button" class="btn btn-default" (click)="closeModal();">{{'global.close' | translate}}</button>
+    </div>
+  </app-modal>
+  

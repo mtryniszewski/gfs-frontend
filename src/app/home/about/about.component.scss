@@ -1,0 +1,17 @@
+.right{
+    min-height: 100vh;
+    background-color:#f9f9f9;
+}
+
+.right h1,h2{
+    margin-top: 0.8rem;
+    padding-top: 1.3rem;
+    text-align: center;
+}
+
+.pright:hover{
+    filter: brightness(85%);
+}
+.pleft:hover{
+    filter: brightness(85%);
+}

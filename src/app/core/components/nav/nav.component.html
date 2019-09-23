@@ -1,0 +1,68 @@
+<nav [ngStyle]="{'visibility':router.url==='/home/homepage' || router.url==='/home/help' || router.url==='/home/about'?'hidden':'visible'}"
+  class="navbar navbar-expand-lg navbar-light bg-light " *ngIf="isLogged()" [ngClass]='transparent' (mouseenter)="notransparent()"
+  (mouseleave)="leave(); hidden();" (scroll)="onWindowScroll($event)">
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img class="logo" [src]="logo" />
+  </a>
+  <button class="navbar-toggler" type="button" (click)="toggle()" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <span class="container-fluid">
+    <div class="navbar-collapse" [ngClass]='collapse' id="navbarSupportedContent" (click)="hidden()">
+      <div class="menu ">
+        <ul class="navbar-nav mr-auto" *ngIf="getUserRole() == 'Standard'">
+          <li class="nav-item">
+            <a class="nav-link white" [routerLink]="['/home/homepage']">{{'nav.homePage' | translate}} </a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link white" [routerLink]="['/user/orders/', this.getUserId()]">{{'nav.orders' | translate}}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" [routerLink]="['/home/help']">{{'nav.help' | translate}} </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto " *ngIf="getUserRole() == 'Admin'">
+          <li class="nav-item">
+            <a class="nav-link white " [routerLink]="['/home']">{{'nav.homePage' | translate}} </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" [routerLink]="['/order/orders-list']">{{'nav.orders' | translate}} </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" [routerLink]="['/user/users-list']">{{'nav.users' | translate}} </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" [routerLink]="['/fabric/fabrics-list']">{{'nav.fabrics' | translate}} </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" [routerLink]="['/producer/producers-list']">{{'nav.producers' | translate}} </a>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle white" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {{'nav.archives' | translate}}
+            </a>
+            <div class="dropdown-menu  ">
+              <a class="nav-link text-light" [routerLink]="['/archives/fabrics-list']">{{'nav.fabrics' | translate}}</a>
+              <a class="nav-link text-light" [routerLink]="['/archives/producers-list']">{{'nav.producers' |
+                translate}}</a>
+              <a class="nav-link text-light" [routerLink]="['/archives/users-list']">{{'nav.users' | translate}}</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" [routerLink]="['/home/help']">{{'nav.help' | translate}} </a>
+          </li>
+        </ul>
+      </div>
+      <div class="log ml-auto text-right">
+        <a class="text-light mr-2 " [routerLink]="['/user/edit-profile']">{{'global.welcome' | translate}}
+          {{getUserName() | titlecase }} </a>
+        <button class="btn btn-outline-light my-2 my-sm-0 " (click)="logout()">{{'global.logout' | translate}}</button>
+      </div>
+    </div>
+  </span>
+</nav>

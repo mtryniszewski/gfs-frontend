@@ -1,0 +1,23 @@
+<app-modal [id]="modalName">
+  <div class="modal-header">
+    <h1>{{'global.sure' | translate}}</h1>
+  </div>
+  <div *ngIf="currentUser" class="modal-body">
+    <p *ngIf="!currentUser.isArchival">{{'user.userArchive.archiveInfo' | translate}}</p>
+    <p *ngIf="currentUser.isArchival">{{'user.userArchive.dearchiveInfo' | translate}}</p>
+    <p>
+      {{'user.userActivate.userName' | translate}}:
+      <b>{{currentUser?.name}} {{currentUser?.surname}} </b>
+    </p>
+  </div>
+  <div class="error">
+    <div *ngIf="errorEvent" class="alert alert-danger mt-1" role="alert">
+      <span>{{'global.problemWithConnection' | translate}}</span>
+    </div>
+  </div>
+  <div *ngIf="currentUser" class="modal-footer">
+    <button *ngIf="!currentUser.isArchival" type="button" class="btn btn-primary" (click)="archiveUser()">{{'global.archive' | translate}}</button>
+    <button *ngIf="currentUser.isArchival" type="button" class="btn btn-danger" (click)="dearchiveUser()">{{'global.dearchive' | translate}}</button>
+    <button type="button" class="btn btn-default" (click)="closeModal();">{{'global.close' | translate}}</button>
+  </div>
+</app-modal>

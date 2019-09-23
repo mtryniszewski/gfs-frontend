@@ -1,0 +1,50 @@
+<div class="container-fluid" [ngClass]='transparent' (mouseenter)="notransparent()" (mouseleave)="leave(); hidden();" (scroll)="onWindowScroll($event)">
+    <div class="row">
+      <div class="col-3 px-0">
+          <app-sidebar>
+
+            </app-sidebar>
+      </div>
+      
+          <div class="col-9 carousel c-accent px-0">
+                <ngx-hm-carousel
+                [(ngModel)]="index"
+                (ngModelChange)="indexChanged($event)"
+                [autoplay-speed]="3000"
+                [autoplay]="true"
+                [infinite]="infinite"
+                [between-delay]="2000">
+
+              <div ngx-hm-carousel-container class="content">
+                  <div class="item cursor-pointer"
+                  ngx-hm-carousel-item
+                  *ngFor="let avatar of avatars; let num of [1,2,3];let num = index">
+                    <div class="img"
+                        [style.backgroundImage]="'url('+avatar.url+index+avatar.title+')'">
+                        <div class="overlay">
+                            <h2>Stwórz swoje wymarzone meble!</h2>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+                <ng-template #carouselPrev>
+                  <div class="click-area">
+                    <img src="https://img.icons8.com/ios/25/edeeef/chevron-left-filled.png">
+                  </div>
+                </ng-template>
+                <ng-template #carouselNext>
+                  <div class="click-area">
+                    <img src="https://img.icons8.com/ios/25/edeeef/chevron-right-filled.png">
+                  </div>
+                </ng-template>
+               
+                <ng-template #carouselDot let-model>
+                  <div class="ball bg-accent mb-5"
+                    [class.visible]="model.index === model.currentIndex"></div>
+                </ng-template>
+              </ngx-hm-carousel>
+          </div>
+</div>
+</div>
+
+            

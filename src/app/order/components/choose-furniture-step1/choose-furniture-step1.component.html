@@ -1,0 +1,62 @@
+<div class="mt-5">
+  <div class="row ">
+    <div class="col-md-12 text-center">
+      <h2>{{'furnitures.step1.header' | translate}}</h2>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-12 text-center">
+      <h6>{{'furnitures.step1.info' | translate}}</h6>
+    </div>
+  </div>
+  <form *ngIf="step1Form" [formGroup]="step1Form" class=" mt-3" (ngSubmit)="onFormSubmit()">
+    <div class="row">
+      <div class="col-md-3 pt-2"><label>{{'furnitures.step1.name' | translate}}</label></div>
+      <div class="col-md-9">
+        <input type="text" appBootstrapErrors [formControlName]="formControlNames.NAME" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 pt-2"><label>{{'furnitures.step1.type.label' | translate}}</label></div>
+      <div class="col-md-9">
+        <select class="form-control" appBootstrapErrors [formControlName]="formControlNames.FURNITURE_TYPE" (change)="onTypeCheckDrawers($event)">
+          <option *ngFor="let x of furnitureTypes" value="{{x.id}}">{{x.name | translate}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 pt-2"><label>{{'furnitures.step1.count' | translate}}</label></div>
+      <div class="col-md-9">
+        <input type="number" step="1" min="1"  class="form-control" appBootstrapErrors [formControlName]="formControlNames.COUNT">
+      </div>
+    </div>
+    <div class="row" *ngIf="isDrawerType">
+      <div class="col-md-3"><label>{{'furnitures.step1.drawers.drawerType' | translate}}</label></div>
+      <div class="col-md-9">
+        <select class="form-control" appBootstrapErrors [formControlName]="formControlNames.DRAWER_TYPE">
+          <option *ngFor="let x of drawerTypes" value="{{x.id}}">{{x.name | translate}}</option>
+        </select>
+        <p class="small">{{'furnitures.step1.drawers.drawerInfo' | translate}}</p>
+      </div>
+    </div>
+    <div class="row" *ngIf="isDrawerConfiguration">
+      <div class="col-md-3 "><label>{{'furnitures.step1.drawers.drawerConfiguration' | translate}}</label></div>
+      <div class="col-md-9">
+        <select class="form-control" appBootstrapErrors [formControlName]="formControlNames.DRAWER_CONFIGURATION">
+          <option *ngFor="let x of drawerConfigurations" value="{{x.id}}">{{x.name | translate}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <a [routerLink]="['/order/details/'+orderId]" class="btn btn-outline-danger  col-md-12">{{'furnitures.cancel'|translate}}</a>
+      </div>
+      <div class="col-md-3">
+        <button type="submit"  class="col-md-12 btn btn-primary" >{{'furnitures.next' | translate}}</button>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </form>
+
+</div>

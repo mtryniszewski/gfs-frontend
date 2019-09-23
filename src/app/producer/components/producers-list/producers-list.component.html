@@ -1,0 +1,60 @@
+<div class="py-5">
+  <div class="container-fluid pt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="select">
+          <input type="text" [value]="searchQuery" [formControl]="producerSearch" class="form-control" [placeholder]="'producers.producerSearch' | translate">
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <h2 class="header-list">{{'producers.producers' | translate}}</h2>
+      </div>
+      <div class="col-md-3 text-right">
+        <button (click)="openNewProducerModal();" class="btn btn-success ml-1">{{'producers.add'|translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="">
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngIf="!hasProducers()" class="alert alert-warning" role="alert">
+          {{'producers.producerNotFound' | translate}}
+        </div>
+        <div *ngIf="hasProducers()" class="table-responsive">
+          <table class="table table-md">
+            <thead>
+              <tr>
+                <th class="thead">{{'producers.name' | translate}}</th>
+                <th class="thead ">{{'producers.location' | translate}}</th>
+                <th class="thead">{{'producers.email' | translate}}</th>
+                <th class="thead">{{'producers.phoneNumber' | translate}}</th>
+                <th class="thead text-center"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producer of producers">
+                <td class="thead">{{producer.name}} </td>
+
+                <td class="thead">{{ producer.city}}, {{producer.street}}</td>
+                <td class="thead">{{ producer.email }}</td>
+                <td class="thead">{{ producer.phoneNumber }}</td>
+                <td class="tbody nowrap text-right">
+                  <button (click)="openEditProducerModal(producer);" class="btn btn-outline-primary ml-1 btn-sm">{{'global.edit'|translate}}</button>
+                  <button (click)="openArchiveProducerModal(producer);" class="btn btn-outline-warning ml-1 btn-sm">{{'global.archive'|translate}}</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-pagination class="text-right" *ngIf="hasProducers()" (changePagination)="onPaginationChange($event)" [itemsCount]="totalCount"></app-pagination>
+<app-new-producer #newProducer></app-new-producer>
+<app-edit-producer #editProducer></app-edit-producer>
+<app-archive-producer #archiveProducer></app-archive-producer>

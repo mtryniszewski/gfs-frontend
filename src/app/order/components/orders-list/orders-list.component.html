@@ -1,0 +1,63 @@
+<div class="py-5">
+  <div class="container-fluid pt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="select">
+          <input type="text" [value]="searchQuery" [formControl]="orderSearch" class="form-control" [placeholder]="'orders.searchOrder' | translate">
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <h2 class="header-list">{{'orders.orders' | translate}}</h2>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="">
+    <div class="row">
+      <div class="col-md-12">
+          <div *ngIf="!hasOrders()" class="alert alert-warning" role="alert">
+              {{'orders.ordersNotFound' | translate}}
+            </div>
+        <div *ngIf="hasOrders()" class="table-responsive">
+          <table class="table table-md">
+            <thead>
+              <tr>
+                <th class="thead">{{'orders.id' | translate}}</th>
+                <th class="thead">{{'orders.user' | translate}}</th>
+                <th class="thead ">{{'orders.date' | translate}}</th>
+                <th class="thead">{{'orders.description' | translate}}</th>
+                <th class="thead text-center">{{'orders.IsConfirmed' | translate}}</th>
+                                 <th class="thead text-center"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orders">
+                <td class="thead">{{order.id}} </td>
+                <td class="thead">{{order.user.name}} {{order.user.surname}} </td>
+
+                <td class="thead">{{ order.date | date: "dd.MM.y"}}</td>
+                <td class="thead">{{ order.description }}</td>
+                <td class="thead text-center">
+                  <span *ngIf="order.isConfirmed" class='fa fa-check'></span>
+                  <span *ngIf="!order.isConfirmed" class='fa fa-times'></span>
+                </td>
+              
+  
+
+                <td class="tbody nowrap text-right">
+                    <a [routerLink]="['/order/details/'+order.id]" class="btn btn-outline-primary ml-1 btn-sm">{{'global.details'|translate}}</a>
+                  
+                                     </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-pagination class="text-right" *ngIf="hasOrders()" (changePagination)="onPaginationChange($event)" [itemsCount]="totalCount"></app-pagination>

@@ -1,0 +1,30 @@
+<div class="bg-img container-fluid">
+  <div class="row gradient">
+    <div class="col-md-3 btn-back-home p-4">
+      <button [routerLink]="['/auth/register']" class="btn rounded-0 btn-outline-light">{{'global.backHome' | translate}}</button>
+    </div>
+    <div class="col-md-6 py-5">
+      <img class="logo px-7 pb-5" [src]="'../../../../assets/logo.png'" />
+      <div class="card">
+        <div class="card-body pr-5 pl-5 pb-5 pt-4 text-light">
+            <div class="text-center pb-4">
+                <h2>{{'auth.activateAccount.activateAccount' | translate}}</h2>
+              </div>
+              <div *ngIf="!errorEvent" class="text-center pb-4">
+                <label>{{'auth.activateAccount.activateInfo' | translate}}</label>
+              </div>
+              <div class="error">
+                <div *ngIf="errorEvent" class="alert alert-danger mt-1" role="alert">
+                    <span *ngIf="userNotFoundError">{{'auth.activateAccount.userNotFoundError' | translate}}</span>
+                                     <span *ngIf="activateError">{{'auth.activateAccount.activateError' | translate}}</span>
+                                 </div>
+            </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="col-md-3 btn-register p-4">
+      <button [routerLink]="['/auth/login']" class="btn rounded-0 btn-outline-light">{{'auth.login.logIn' | translate}}</button>
+    </div>
+  </div>

@@ -1,0 +1,60 @@
+<div class="bg-img container-fluid">
+  <div class="row gradient">
+    <div class="col-md-3 btn-back-home p-4">
+      <button [routerLink]="['/home/homepage']" class="btn rounded-0 btn-outline-light">{{'global.backHome' | translate}}</button>
+    </div>
+    <div class="col-md-6 py-5">
+      <img class="logo px-7 pb-5" [src]="'../../../../assets/logo.png'" />
+      <div class="card">
+        <div class="card-body pr-5 pl-5 pb-5 pt-4 text-light">
+            <div class="text-center pb-4">
+                <h2>{{'auth.register.signIn' | translate}}</h2>
+              </div>
+          <form [formGroup]="registerForm" (ngSubmit)="onFormSubmit()">
+            <div class="form-group">
+           
+              <input type="text" autocomplete="off" class="form-control" appBootstrapErrors errorKeyParent="validationError.name" [placeholder]="'auth.register.firstName' | translate"
+                [formControlName]="formControlNames.NAME">
+            </div>
+            <div class="form-group">
+             
+              <input type="text" autocomplete="off" class="form-control" appBootstrapErrors errorKeyParent="validationError.surname" [placeholder]="'auth.register.surname' | translate"
+                [formControlName]="formControlNames.SURNAME">
+            </div>
+            <div class="form-group">
+           
+              <input type="email" autocomplete="off" class="form-control" appBootstrapErrors [placeholder]="'global.email' | translate"
+                [formControlName]="formControlNames.EMAIL_ADDRESS">
+            </div>
+            <div class="form-group">
+        
+              <input type="password" autocomplete="off" class="form-control" errorKeyParent="validationError.password" appBootstrapErrors
+                [placeholder]="'auth.password' | translate" [formControlName]="formControlNames.PASSWORD">
+            </div>
+            <div class="form-group">
+              
+              <input type="password" autocomplete="off" class="form-control" errorKeyParent="validationError.password" appBootstrapErrors
+                [placeholder]="'auth.repeatPassword' | translate" [formControlName]="formControlNames.REPEAT_PASSWORD">
+            </div>
+            <div class="form-group center">
+              
+              <label class="center">{{'auth.register.registerInfo'|translate}}</label>
+             
+            <button [disabled]="!registerForm.valid" type="submit" class="btn btn-register  ">{{'auth.register.signIn' | translate}}</button>
+          </div>
+          </form>
+        </div>
+      </div>
+      <div class="error">
+        <span *ngIf="errorEvent">
+          <div class="alert alert-danger mt-1" role="alert">
+            <span *ngIf="invalidCredentials">{{'global.problemWithConnection' | translate}}</span>
+            <span *ngIf="userExists">{{'auth.register.userExists' | translate}}</span>
+          </div>
+        </span>
+      </div>
+        </div>
+    <div class="col-md-3 btn-login p-4">
+      <button [routerLink]="['/auth/login']" class="btn rounded-0 btn-outline-light">{{'auth.login.logIn' | translate}}</button>
+    </div>
+  </div>

@@ -1,0 +1,75 @@
+ul>li.dropdown:hover>.dropdown-menu {
+  transition: 500ms;
+  display: block;
+  top: 30px;
+}
+
+nav {
+  background: url('./../../../../assets/nav.jpg');
+  background-size: 100%;
+  background-color:white;
+
+}
+.nav-item > .white{
+  color:white;
+  opacity: 1;
+  
+}
+.nav-item > .white:hover{
+  color:white;
+  opacity: 0.7;
+  
+}
+
+.dropdown-menu>a {
+  background-color: sienna;
+}
+
+.bg-primary {
+  background-color: sienna;
+}
+
+.dropdown-menu>a:hover {
+  background-color: sienna;
+  background-size: 100%;
+}
+
+.nodisplay {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+.dropdown-menu {
+  border: none;
+}
+
+.logo {
+  max-height:60px;
+}
+
+.transparent {
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  background-color: rgba(160, 81, 45, 0.295);
+}
+
+.navbar {
+  transition: 500ms;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.log {
+  float: right;
+  white-space: nowrap;
+  
+}
+
+.menu {
+  float: left;
+}

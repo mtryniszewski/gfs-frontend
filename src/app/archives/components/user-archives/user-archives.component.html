@@ -1,0 +1,74 @@
+<div class="py-5">
+  <div class="container-fluid pt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="select">
+          <input type="text" [value]="searchQuery" [formControl]="userSearch" class="form-control" [placeholder]="'user.usersList.search' | translate">
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <h2 class="header-list">{{'user.usersList.archivalUsers' | translate}}</h2>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="">
+    <div class="row">
+      <div class="col-md-12">
+          <div *ngIf="!hasUsers()" class="alert alert-warning" role="alert">
+              {{'user.usersNotFound' | translate}}
+            </div>
+        <div *ngIf="hasUsers()"class="table-responsive">
+          <table class="table table-md">
+            <thead>
+              <tr>
+                <th class="thead">{{'user.usersList.fullName' | translate}}</th>
+                <th class="thead">{{'global.email' | translate}}</th>
+                <th class="thead text-center">{{'user.usersList.admin' | translate}}</th>
+                <th class="thead text-center">{{'user.usersList.active' | translate}}</th>
+                <th class="thead"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td class="thead">
+                  <p class="name m-auto" title="{{ user.name | titlecase }} {{ user.surname | titlecase }}">
+                    {{ user.name | titlecase }} {{ user.surname | titlecase }}
+                  </p>
+                </td>
+                <td class="thead">{{ user.email }}</td>
+
+                <td class="thead text-center">
+                  <span *ngIf="user.permissions === userRole.Admin" class="fa fa-check"></span>
+                  <span *ngIf="user.permissions === userRole.Standard" class="fa fa-times"></span>
+                </td>
+                <td class="thead text-center">
+                  <span *ngIf="user.isActive" class='fa fa-check'></span>
+                  <span *ngIf="!user.isActive" class='fa fa-times'></span>
+                </td>
+
+
+                <td class="tbody nowrap text-right">
+
+                  <button (click)="openDearchiveModal(user);" class="btn btn-outline-warning ml-1 btn-sm">{{'user.usersList.dearchive'|translate}}</button>
+                 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-pagination *ngIf="hasUsers()" class="text-right" (changePagination)="onPaginationChange($event)" [itemsCount]="totalCount"></app-pagination>
+<!-- <app-user-permissions #permissionsUser></app-user-permissions>
+<app-user-activate #activateUser></app-user-activate>
+<app-user-archive #archiveUser></app-user-archive> -->
+<app-dearchive-modal #dearchiveModal></app-dearchive-modal>
+
+

@@ -1,0 +1,23 @@
+.left{
+    background-size: cover;
+    filter: brightness(50%);
+    height: 100%;
+    background-image: url("../../../assets/sidebar.jpg");
+}
+
+.right{
+    height: 100%;
+}
+
+.sidebar{
+    font-size: 1rem;
+   }
+
+.sidebar a:hover{
+    padding-left: 18px;
+}
+
+
+.active{
+    text-decoration: underline;
+  }

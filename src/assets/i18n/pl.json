@@ -1,0 +1,443 @@
+{
+  "validationError": {
+    "matchPassword": "Hasła nie są identyczne",
+    "required": "Pole jest wymagane",
+    "maxlength": "Wartość jest za długa",
+    "minlength": "Wartość jest za krótka",
+    "accountNotActive": "Konto nie jest aktywne. Kliknij w link aktywacyjny, wysłany na adres e-mail podany przy rejestracji lub skontaktuj się z administratorem",
+    "email": "Podaj poprawny adres e-mail",
+    "width": {
+      "max": "Maksymalna szerokość to 1300 mm",
+      "min": "Minimalna szerokość to 100 mm"
+    },
+    "bottomFrontHeight": {
+      "max": "Maksymalna wysokość dolnego frontu to 1000 mm",
+      "min": "Minimalna wysokość dolnego frontu to 500 mm"
+    },
+    "depth": {
+      "max": "Maksymalna głębokość to 1000 mm",
+      "min": "Minimalna głębokość to 100 mm"
+    },
+    "depth1": {
+      "max": "Maksymalna głębokość 1 to 1300 mm",
+      "min": "Minimalna głębokość 1 to 500 mm"
+    },
+    "depth2": {
+      "max": "Maksymalna głębokość 2 to 1300 mm",
+      "min": "Minimalna głębokość 2 to 500 mm"
+    },
+    "width1": {
+      "max": "Maksymalna szerokość 1 to 1300 mm",
+      "min": "Minimalna szerokość 1 to 800 mm"
+    },
+    "width2": {
+      "max": "Maksymalna szerokość 2 to 1300 mm",
+      "min": "Minimalna szerokość 2 to 800 mm"
+    },
+    "frontWidth":{
+      "max": "Maksymalna szerokość frontu to 1000 mm",
+      "min": "Minimalna szerokość frontu to 455 mm"
+    },
+    "topFrontHeight": {
+      "max": "Maksymalna wysokość górnego frontu to 1000 mm",
+      "min": "Minimalna wysokość górnego frontu to 300 mm"
+    },
+    "frameThickness": {
+      "max": "Maksymalna szerokość ramki to 200 mm",
+      "min": "Minimalna szerokość ramki to 40 mm"
+    },
+    "frontCount": {
+      "max": "Szafka może mieć najwyżej 2 fronty",
+      "min": "Szafka musi mieć co najmniej 0 frontów"
+    },
+    "shelfCount":{
+      "max": "Szafka może mieć najwyżej 5 półek",
+      "min": "Szafka musi mieć co najmniej 0 półek"
+    },
+    "height":{
+      "max": "Maksymalna wysokość szafki to 2200 mm",
+      "min": "Minimalna wysokość szafki to 400 mm"
+    },
+    "name": {
+      "maxlength": "Imię nie może być dłuższe niż 20 znaków",
+      "required": "Imię jest wymagane"
+    },
+    "surname": {
+      "maxlength": "Nazwisko nie może być dłuższe niż 40 znaków",
+      "required": "Nazwisko jest wymagane"
+    },
+    "password": {
+      "minlength": "Hasło nie może być krótsze niż 6 znaków",
+      "matchPassword": "Hasła nie są identyczne",
+      "required": "Hasło jest wymagane"
+    }
+  },
+  "global": {
+    "surname": "Nazwisko",
+    "name": "Imię",
+    "confirm": "Zatwierdź",
+    "actions": "Akcje",
+    "title": "Tesar Studio",
+    "send": "Wyślij",
+    "save": "Zapisz",
+    "delete": "Usuń",
+    "archive": "Archiwizuj",
+    "dearchive": "Przywróć",
+    "cancel": "Anuluj",
+    "problemWithConnection": "Problem z połączeniem",
+    "welcome": "Witaj,",
+    "email": "E-mail",
+    "logout": "Wyloguj",
+    "fieldIsRequired": "Pole jest wymagane",
+    "saveChanges": "Zapisz zmiany",
+    "description": "Opis",
+    "search": "Wyszukaj",
+    "edition": "Edytuj",
+    "wrongLogin": "Niepoprawny adres e-mail",
+    "wrongPassword": "Niepoprawne hasło",
+    "edit": "Edytuj",
+    "preview": "Podgląd",
+    "close": "Zamknij",
+    "sure": "Czy jesteś pewien?",
+    "back": "Wróć",
+    "backHome": "Strona główna",
+    "details": "Szczegóły",
+    "deactivate": "Deaktywuj",
+    "activate": "Aktywuj",
+    "grant": "Nadaj uprawnienia administratora",
+    "revoke": "Odbierz uprawnienia administratora"
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Hasło",
+    "repeatPassword": "Powtórz hasło",
+    "login": {
+      "login": "Zaloguj",
+      "logIn": "Zaloguj się",
+      "goToLogin": "Przejdź do logowania"
+    },
+    "activateAccount": {
+      "activateAccount": "Aktywacja konta",
+      "activateInfo": "Gratulacje! Twoje konto zostało właśnie aktywowane! Możesz teraz korzystać z naszego systemu. Życzymy owocnej pracy!",
+      "userNotFoundError": "Niestety, nie znaleźliśmy takiego użytkownika",
+      "activateError": "Podczas aktywacji wystąpił błąd. Spróbuj ponownie"
+    },
+    "register": {
+      "register": "Rejestracja",
+      "signIn": "Utwórz konto",
+      "firstName": "Imię",
+      "surname": "Nazwisko",
+      "userExists": "Użytkownik o podanym adresie e-mail już istnieje",
+      "registerInfo": "Na podany adres e-mail wysłany zostanie link aktywujący konto"
+    },
+    "resetPassword": {
+      "resetPassword": "Reset hasła",
+      "badPassword": "Nieprawidłowe hasło",
+      "wrongReset": "Błąd resetu hasła"
+    },
+    "forgotPassword": {
+      "forgotPassword": "Zapomniałeś hasła?",
+      "wrongForgot": "Niepoprawny adres e-mail",
+      "forgotInfo": "Nic nie szkodzi! Wprowadź tutaj swój adres e-mail podany przy rejestracji, a my wyślemy do Ciebie link, dzięki któremu ustawisz swoje nowe hasło.",
+      "userNotFound": "Nie znaleźliśmy użytkownika o podanym adresie e-mail"
+    }
+  },
+  "user": {
+    "user": "Użytkownik",
+    "usersNotFound": "Nie znaleziono użytkowników",
+    "editAccount": "Edytuj profil",
+    "changePassword": "Zmień hasło",
+    "deleteAccount": "Usuń konto",
+    "deleteInfo": "Przykro nam, że nas opuszczasz :-( Pamiętaj, że usuwając konto stracisz dostęp do wszystkich swoich zamówień",
+    "editUser": {
+      "editUser": "Edytuj użytkownika",
+      "firstName": "Imię",
+      "surname": "Nazwisko",
+      "changePassword": "Zmień hasło",
+      "password": "Hasło",
+      "newPassword": "Nowe hasło",
+      "repeatPassword": "Powtórz hasło",
+      "oldPassword": "Aktualne hasło",
+      "problemEditUser": "Problem z edycją użytkownika",
+      "activateUser": "Konto aktywne",
+      "deactivateUser": "Dezaktywuj użytkownika",
+      "grantAdmin": "Administrator",
+      "revokeAdmin": "Odbierz uprawnienia administratora",
+      "archiveUser": "Użytkownik zarchiwizowany",
+      "dearchiveUser": "Przywróć użytkownika z archiwum",
+      "deleteUser": "Usuń użytkownika",
+      "activateUserPrompt": "Aktywacja użytkownika umożliwi mu zalogowanie się do systemu",
+      "deactivateUserPrompt": "Dezaktywacja użytkownika uniemożliwi mu zalogowanie się do systemu",
+      "grantAdminPrompt": "Nadanie praw administratora umożliwi użytkownikowi wprowadzanie zmian w kluczowych elementach systemu",
+      "revokeAdminPrompt": "Odebranie praw administratora uniemożliwi użytkownikowi wprowadzanie zmian w kluczowych elementach systemu",
+      "archiveUserPrompt": "Przeniesienie użytkownika do archiwum usunie go z listy aktywnych użytkowników i dezaktywuje jego konto",
+      "dearchiveUserPrompt": "Przywrócenie użytkownika z archiwum aktywuje go i umieści na liście aktywnych użytkowników",
+      "deleteUserPrompt": "Usunięcie użytkownika spowoduje usunięcie wszystkich jego danych z systemu",
+      "dearchiveShort": "Przywróć"
+    },
+    "userActivate": {
+      "activateInfo": "Manualna aktywacja konta pozwoli na zalogowanie się temu użytkownikowi",
+      "deactivateInfo": "Deaktywacja konta zablokuje możliwość logowania się do systemu",
+      "userName": "Użytkownik"
+    },
+    "userArchive": {
+      "archiveInfo": "Archiwizacja użytkownika uniemożliwi deaktywuje jego konto i przeniesie go do archiwum. Będziesz go mógł przywrócić w archiwum użytkowników",
+      "dearchiveInfo": "Przywrócenie użytkownika z archiwum umieści go ponownie na liście użytkowników. Jego konto nie zostanie automatycznie aktywowane."
+    },
+    "userPermissions": {
+      "grantInfo": "Nadanie użytkownikowi praw administratora pozwoli mu na zarządzanie użytkownikami, materiałami i producentami. Jednocześnie straci on możliwość dodawania własnych zamówień i zarządzania nimi. Pamiętaj, aby przydzielać takie uprawnienia tylko właściwym osobom!",
+      "revokeInfo": "Nadanie zwykłych praw użytkownikowi zabierze mu możliwość zarządzania użytkownikami, materiałami i producentami. Jednocześnie zostanie przywrócona opcja dodawania własnych zamówień i zarządzania nimi."
+    },
+    "usersList": {
+      "usersList": "Lista użytkowników",
+      "search": "Wyszukaj użytkownika",
+      "fullName": "Użytkownik",
+      "admin": "Administrator",
+      "active": "Aktywny",
+      "orders": "Zamówienia",
+      "archivalUsers": "Lista archiwalnych użytkowników",
+      "archive": "Archiwizuj",
+      "dearchive": "Przywróć",
+      "activate": "Aktywacja",
+      "permissions": "Uprawnienia"
+    }
+  },
+  "orders": {
+    "ordersNotFound": "Nie znaleziono zamówień",
+    "orderDetails": "Szczegóły zamówienia nr ",
+    "editOrder": "Edytuj zamówienie",
+    "newOrder": "Nowe zamówienie",
+    "add": "Dodaj zamówienie",
+    "ordersList": "Twoje zamówienia",
+    "userOrders": "Zamówienia użytkownika",
+    "orders": "Zamówienia",
+    "id": "ID",
+    "generatePDF": "Pobierz PDF zamówienia",
+    "user": "Zamawiający",
+    "date": "Data utworzenia",
+    "description": "Opis",
+    "IsConfirmed": "Zatwierdzone",
+    "IsArchival": "Archiwalne",
+    "searchOrder": "Wyszukaj zamówienie",
+    "confirmInfo": "Zatwierdź zamówienie jeśli chcesz wygenerować plik PDF. Późniejsza edycja zamówienia będzie niemożliwa.",
+    "order": "Zamówienie",
+    "fromDay": "z dnia",
+    "archiveInfo": "Usuń zamówienia, których już nie potrzebujesz. Pamiętaj, że nie będziesz miał możliwości ich przywrócenia."
+  },
+  "producers": {
+    "id": "ID",
+    "name": "Nazwa",
+    "location": "Lokalizacja",
+    "email": "E-mail",
+    "phoneNumber": "Nr telefonu",
+    "producerSearch": "Wyszukaj producenta",
+    "producers": "Lista producentów",
+    "archivalProducers": "Lista archiwalnych producentów",
+    "producerNotFound": "Nie znaleziono producentów",
+    "add": "Dodaj producenta",
+    "street": "Ulica",
+    "city": "Miejscowość",
+    "newProducer": "Dodaj producenta",
+    "editProducer": "Edytuj producenta",
+    "archiveInfo": "Archiwizacja producenta nie będzie wyświetlała go na liście producentów i listach rozwijanych",
+    "dearchiveInfo": "Przywrócenie producenta ponownie wyświetli go na liście producentów",
+    "producer": "Producent"
+  },
+  "fabrics": {
+    "name": "Nazwa",
+    "producerCode": "Kod producenta",
+    "thickness": "Grubość",
+    "producer": "Producent",
+    "newFabric": "Dodaj materiał",
+    "imageUrl": "Link do podglądu",
+    "image": "Podgląd",
+    "archiveInfo": "Archiwizacja materiału nie będzie wyświetlała go na liście materiałów i listach rozwijanych",
+    "dearchiveInfo": "Przywrócenie materiału ponownie wyświetli go na liście materiałów",
+    "fabric": "Materiał",
+    "fabrics": "Lista materiałów",
+    "archivalFabrics": "Lista archiwalnych materiałów",
+    "add": "Dodaj materiał",
+    "fabricSearch": "Wyszukaj materiał",
+    "fabricNotFound": "Nie znaleziono materiałów",
+    "editFabric": "Edytuj materiał"
+
+  },
+  "nav": {
+    "orders": "Zamówienia",
+    "help": "Pomoc",
+    "about": "O projekcie",
+    "homePage": "Strona główna",
+    "archives": "Archiwum",
+    "users": "Użytkownicy",
+    "fabrics": "Materiały",
+    "producers": "Producenci"
+  },
+  "formatters": {
+    "rectangular": "Formatki prostokątne",
+    "triangular": "Formatki trójkątne",
+    "lformatters": "Formatki w kształcie litery L",
+    "pentagon": "Formatki pięciokątne (ze ściętym rogiem)",
+    "count": "ILOŚĆ",
+    "name": "ELEMENT",
+    "width": "SZER.",
+    "length": "DŁUG.",
+    "milling": "FREZOWANIE",
+    "fabric": "MATERIAŁ",
+    "type": "typ",
+    "widthMilling": "wszerz",
+    "lengthMilling": "wzdłuż",
+    "border": "OKLEJANIE",
+    "right": "prawa",
+    "left": "lewa",
+    "top": "góra",
+    "bottom": "dół",
+    "leftSpace": "od lewej",
+    "topSpace": "od góry",
+    "cutterLength": "dług.",
+    "cutterWidth": "szer.",
+    "cutterDepth": "głęb.",
+    "space": "odstęp"
+  },
+  "furnitures": {
+    "furnituresNotFound": "Nie znaleziono mebli. Zamówienie jest puste",
+    "newFurniture": "Dodaj mebel",
+    "next": "Dalej",
+    "back": "Wróć",
+    "cancel": "Anuluj",
+    "id": "ID",
+    "name": "Nazwa mebla",
+    "count": "Ilość",
+    "type": "Typ mebla",
+    "generate": "Generuj formatki",
+    "step1": {
+      "header": "Krok 1 - Podstawowe informacje",
+      "info": "Uzupełnij podstawowe informacje o swoim meblu ",
+      "name": "Nazwa mebla",
+      "count": "Ilość",
+      "type": {
+        "label": "Rodzaj mebla",
+        "singleFormatter": "pojedyncza formatka",
+        "sinkBottom": "szafka stojąca - zlewowa",
+        "blindSideBottom": "szafka stojąca - narożna ślepy bok ",
+        "pentagonCornerBottom": "szafka stojąca - narożna wypukła",
+        "cutFinalBottom": "szafka stojąca - skośna",
+        "basicBottom": "szafka stojąca - prosta",
+        "basicWithDrawerBottom": "szafka stojąca - prosta z szufladą",
+        "lCornerBottom": "szafka stojąca - narożna wklęsła (L)",
+        "onlyDrawersBottom": "szafka stojąca - z szufladami",
+        "basicTop": "szafka wisząca - prosta",
+        "basicGlassTop": "szafka wisząca - prosta ze szkłem",
+        "oneHorizontalTop": "szafka wisząca - pozioma pojedyncza",
+        "twoHorizontalTop": "szafka wisząca - pozioma podwójna",
+        "threeHorizontalTop": "szafka wisząca - pozioma potrójna",
+        "oneHorizontalGlassTop": "szafka wisząca - pozioma pojedyncza ze szkłem",
+        "twoHorizontalGlassTop": "szafka wisząca - pozioma podwójna ze szkłem",
+        "threeHorizontalGlassTop": "szafka wisząca - pozioma potrójna ze szkłem",
+        "pentagonCornerTop": "szafka wisząca - narożna wypukła",
+        "lCornerTop": "szafka wisząca - narożna wklęsła (L)",
+        "ovenMicroHigh": "szafka wysoka - piekarnik/mikrofala",
+        "twoPartsHigh": "szafka wysoka - dwuczęściowa",
+        "threePartsHigh": "szafka wysoka - trzyczęściowa"
+
+      },
+      "drawers": {
+        "drawerConfiguration": "Konfiguracja szuflad",
+        "singleShort": "pojedyncza niska",
+        "singleHigh": "pojedyncza wysoka",
+        "twoHigh": "dwie wysokie",
+        "twoHighOneShort": "niska + dwie wysokie",
+        "oneHighThreeShort": "trzy niskie + dwie wysokie",
+        "fiveShort": "pięć niskich",
+        "drawerType": "Typ okucia szuflad",
+        "drawerInfo": "Aktualnie oferujemy okucia dwóch najpopularniejszych firm. Okucie Amix/Blum wiąże się z dodatkowym frezowaniem. Nasz system zaznaczy je dla Ciebie. Pamiętaj o wyborze konfiguracji szuflad. Do Twojej dyspozycji jest sześć opcji. Wybierz najlepszą dla siebie. Więcej informacji znajdziesz w dziale Pomoc",
+        "versalite": "Versalite",
+        "amix": "Amix/Blum"
+      }
+    },
+    "step2": {
+      "info": "Zdecyduj, z jakich materiałów będzie wykonany Twój mebel",
+      "header": "Krok 2 - Wybierz materiały",
+      "backFabric": "Plecy szafki",
+      "frontFabric": "Fronty szafki",
+      "corpusFabric": "Korpus szafki"
+    },
+    "step3": {
+      "header": "Krok 3 - Określ wymiary",
+      "info": "Podaj wymiary zgodnie z rysunkiem poglądowym",
+      "width": "Szerokość (wymiar S)",
+      "frontWidth": "Szerokość frontu",
+      "width1": "Szerokość 1 (wymiar S1)",
+      "width2": "Szerokość 2 (wymiar S2)",
+      "height": "Wysokość (wymiar W)",
+      "depth": "Głębokość (wymiar G)",
+      "depth1": "Głębokość 1 (wymiar G1)",
+      "depth2": "Głębokość 2 (wymiar G2)",
+
+      "shelfCount": "Ilość półek",
+      "frontCount": "Ilość frontów",
+      "frameThickness": "Grubość ramki wokół szklanego frontu",
+      "bottomFrontHeight": "Wysokość dolnego frontu",
+      "topFrontHeight": "Wysokość górnego frontu"
+
+    },
+    "step4": {
+      "header": "Krok 4 - Podsumowanie",
+      "info": "Czy wszystkie podane dane się zgadzają? Jeśli tak, kliknij Generuj formatki"
+    }
+
+  },
+  "alertify": {
+    "warning": {
+      "checkForm": "Popraw błędy w formularzu!"
+    },
+    "success": {
+      "generated": "Generowanie formatek...",
+      "credentialChange": "Zapisano zmiany",
+      "credentialChangeSignIn": "Zapisano zmiany. Zaloguj się!",
+      "mailSent": "Mail został wysłany",
+      "welcome": "Witaj w TesarStudio!",
+      "registerSuccess": "Konto zostało utworzone. Aktywuj swoje konto klikając w link wysłany na adres e-mail podany przy rejestracji",
+      "user": {
+        "reset": "Hasło zostało zmienione",
+        "dearchived": "Użytkownik przywrócony z archiwum",
+        "archived": "Użytkownik przeniesiony do archiwum",
+        "activated": "Konto użytkownika zostało aktywowane",
+        "activatedAccount": "Aktywacja przebiegła pomyślnie",
+        "deactivated": "Konto użytkownika zostało zdezaktywowane",
+        "granted": "Prawa administratora nadane",
+        "revoked": "Prawa administratora odebrane",
+        "changedPassword": "Hasło zostało zmienione. Zaloguj się ponownie",
+        "deletedAccount": "Konto zostało usunięte."
+      },
+      "producer": {
+        "dearchived": "Producent przywrócony z archiwum",
+        "archived": "Producent przeniesiony do archiwum",
+        "created": "Nowy producent został dodany"
+      },
+      "fabric": {
+        "dearchived": "Materiał przywrócony z archiwum",
+        "archived": "Materiał przeniesiony do archiwum",
+        "created": "Nowy materiał został dodany"
+      },
+      "order": {
+        "created": "Nowe zamówienie zostało dodane",
+        "archived": "Zamówienie przeniesione do archiwum",
+        "confirmed": "Zamówienie zostało zatwierdzone",
+        "downloadInfo": "Twoje zamówienie jest generowane. Za chwilę rozpocznie się pobieranie...",
+        "furnitureDeleted": "Mebel został usunięty z zamówienia"
+
+      }
+    },
+    "error": {
+      "generatingError": "Podczas generowania formatek wystąpił błąd",
+      "onPageSizeChangeMin": "Minimum wierszy na stronę: 10!",
+      "onPageSizeChangeMax": "Maksimum wierszy na stronę: 50!",
+      "credentialsWrong": "Podałeś nieprawidłowe dane!",
+      "downloadFailed": "Podczas pobierania wystąpił błąd"
+    }
+  },
+  "pagination": {
+    "previous": "Poprzednia",
+    "next": "Następna"
+  }
+}

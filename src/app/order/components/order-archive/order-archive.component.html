@@ -1,0 +1,23 @@
+<app-modal [id]="modalName">
+    <div class="modal-header">
+      <h1>{{'global.sure' | translate}}</h1>
+    </div>
+    <div class="modal-body">
+        <p>{{'orders.archiveInfo' | translate}}</p>
+        <p>{{'orders.order' | translate}}:
+          <b>{{currentOrder?.description}}</b>
+          {{'orders.fromDay'|translate}}:
+          <b>{{currentOrder?.date | date: "dd.MM.y"}} </b>
+        </p>
+    </div>
+    <div class="error">
+      <div *ngIf="errorEvent" class="alert alert-danger mt-1" role="alert">
+        <span>{{'global.problemWithConnection' | translate}}</span>
+      </div>
+    </div>
+    <div  class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="archiveOrder()">{{'global.delete' | translate}}</button>
+          <button type="button" class="btn btn-default" (click)="closeModal();">{{'global.close' | translate}}</button>
+    </div>
+  </app-modal>
+  

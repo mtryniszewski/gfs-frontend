@@ -1,0 +1,40 @@
+<div class="container-fluid" [ngClass]='transparent' (mouseenter)="notransparent()" (mouseleave)="leave(); hidden();" (scroll)="onWindowScroll($event)">
+        <div class="row">
+              <div class="col-3 px-0">
+                  <app-sidebar>
+            
+                  </app-sidebar>
+              </div>
+              <div class="col-9 right">
+                  <div class="main w-100">
+                  <h1>Aplikacja webowa do generowania formatek meblowych</h1>
+                  <h2><u>TESAR STUDIO</u></h2>
+                  <div class="h-50 px-4 pt-4">
+                  <p><b>Celem projektu</b> jest opracowanie i stworzenie systemu generującego formatki meblowe.</p>
+                  <p>Ponieważ wiedza niezbędna do zbudowania takiego systemu, nie jest wiedzą powszechną, a specjalistyczną, wykorzystywaną przez przemysł stolarski, należało najpierw ją pozyskać. <br>W tym celu przeprowadzono szereg rozmów z profesjonalistą, który wyjaśnił, w jaki sposób wyliczane są wymiary poszczególnych mebli, co pozwoliło na zaimplementowanie istotnej części aplikacji – algorytmu generującego formatki.</p>
+                  <p>Pozyskana wiedza pozwoliła również na wyspecyfikowanie wymagań biznesowych i funkcjonalnych, które spełniać ma opisywany system. Ponadto w procesie projektowania ustalono, w jakiej architekturze i w jakich technologiach pracowała będzie aplikacja. Ponieważ Tesar Studio to system webowy, zdecydowano, że powstaną <br> dwie aplikacje – backendowa, wystawiająca dane (na zasadzie REST API) i frontendowa, pełniąca rolę klienta. Stawiając na wieloplatformowość, ustalono, że stackiem technologicznym, będzie .NET Core i Angular 6.</p>
+                  </div>
+                  </div>
+                  <div class="row pt-4 w-100 h-25">
+                      <div class="col-5 h-50">
+                          <div class="points h-25">
+                              <ul>
+                                  <h4><u><b>Możliwości rozwoju projektu</b></u></h4>
+                                  <li>Obsługa akcesoriów meblowych</li>
+                                  <li>Rozbudowanie systemu o nowe typy mebli</li>
+                                  <li>Dodanie modułu szaf</li>
+                                  <li>Wizualizacja mebli w 3D</li>
+                                  <li>Przygotowanie rozkroju do stolarni</li>
+                                  <li>Integracja z systemami wycinającymi formatki</li>
+                              </ul>
+                          </div>
+                      </div>
+                          <div class="col-7 h-25">
+                              <img class="pleft col-6" src="../../../assets/slider1.jpg">
+                              <img class="pright col-6" src="../../../assets/slider0.jpg">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </div>
+      

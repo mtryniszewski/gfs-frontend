@@ -1,0 +1,57 @@
+<div >
+  <h5 class="text-underline">{{'formatters.rectangular'|translate}}</h5>
+  <table class="table-bordered">
+    <thead class="thead-light">
+      <tr class="text-center ">
+        <th class="align-middle" rowspan="2">{{'formatters.name' | translate}}</th>
+        <th class="align-middle" rowspan="2">{{'formatters.width' | translate}}</th>
+        <th class="align-middle" rowspan="2">{{'formatters.length' | translate}}</th>
+        <th class="align-middle" rowspan="2">{{'formatters.count' | translate}}</th>
+
+        <th colspan="4">{{'formatters.border' | translate }}</th>
+
+        <th colspan="5">{{'formatters.milling' | translate}}</th>
+        <th class="align-middle" rowspan="2">{{'formatters.fabric' | translate}}</th>
+
+      </tr>
+      <tr class="text-center">
+
+        <th>{{'formatters.top' | translate}}</th>
+        <th>{{'formatters.bottom' | translate}}</th>
+        <th>{{'formatters.left' | translate}}</th>
+        <th>{{'formatters.right'| translate}}</th>
+
+        <th>{{'formatters.type' | translate}}</th>
+
+        <th>{{'formatters.space' | translate}}</th>
+        <th>{{'formatters.cutterLength' | translate}}</th>
+        <th>{{'formatters.cutterWidth' | translate}}</th>
+        <th>{{'formatters.cutterDepth' | translate}}</th>
+      
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let formatter of rectangularFormatters">
+        <td >{{formatter.name}}</td>
+        <td >{{formatter.width}}</td>
+        <td >{{formatter.length}}</td>
+        <td >{{formatter.count}}</td>
+
+        <td >{{formatter.isTopBorder ? formatter.topBorderThickness:'-'}}        </td>
+        <td >{{formatter.isBottomBorder ? formatter.bottomBorderThickness:'-'}}        </td>
+        <td >{{formatter.isLeftBorder ? formatter.leftBorderThickness:'-'}}        </td>
+        <td >{{formatter.isRightBorder ? formatter.rightBorderThickness:'-'}}        </td>
+
+        <td >{{formatter.milling=='0'? 'wzdłuż':formatter.milling=='1'? 'wszerz':'-'}}</td>
+        <td >{{formatter.milling=='0'? 'od lewej '+formatter.leftSpace:formatter.milling=='1'? 'od góry '+ formatter.topSpace:'-'}}</td>
+        <td >{{formatter.cutterLength}}</td>
+        <td >{{formatter.cutterWidth}}</td>
+        <td >{{formatter.cutterDepth}}</td>
+
+        <td >{{formatter.fabric.producerCode}} - {{formatter.fabric.name}} ({{formatter.fabric.thickness}} mm)</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

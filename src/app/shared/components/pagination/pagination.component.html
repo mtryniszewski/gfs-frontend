@@ -1,0 +1,24 @@
+<div class="container-fluid pr-5"> 
+  <nav aria-label="Page navigation example" class="d-flex justify-content-end">
+    <ul class="pagination justify-content-end">
+      <li class="page-item">
+        <button class="page-link" (click)="onClickPrevious()" [disabled]="firstPage()">
+          {{'pagination.previous' | translate}}
+        </button>
+      </li>
+      <li class="page-item" [ngClass]="{'active': isCurrentPage(page)}" *ngFor="let page of pages">
+        <a class="page-link" (click)="onPageChange(page)">
+          {{page}}
+        </a>
+      </li>
+      <li class="page-item">
+        <button class="page-link" (click)="onClickNext()" [disabled]="lastPage()">
+          {{'pagination.next' | translate}}
+        </button>
+      </li>
+    </ul>
+    <div class="form-group page-size">
+      <input type="number" class="form-control" [(ngModel)]="pageSize" min="5" max="30" step="1" (focusout)="onPageSizeChange()">
+    </div>
+  </nav>
+</div>

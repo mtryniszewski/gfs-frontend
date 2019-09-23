@@ -1,0 +1,108 @@
+<div class="mt-5">
+  <div class="row ">
+    <div class="col-md-12 text-center">
+      <h2>{{'furnitures.step3.header' | translate}}</h2>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-12 text-center">
+      <h6>{{'furnitures.step3.info' | translate}}</h6>
+    </div>
+  </div>
+  <form *ngIf="step3Form" [formGroup]="step3Form" class=" mt-3" (ngSubmit)="onFormSubmit()">
+    <div class="row" *ngIf="isWidth">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.width' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.width" [formControlName]="formControlNames.WIDTH" class="form-control">
+      </div>
+    </div>
+
+    <div class="row " *ngIf="isWidth1">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.width1' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.width1" [formControlName]="formControlNames.WIDTH1" class="form-control">
+      </div>
+    </div>
+    <div class="row" *ngIf="isWidth2">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.width2' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.width2" [formControlName]="formControlNames.WIDTH2" class="form-control">
+      </div>
+    </div>
+
+    <div class="row" *ngIf="isDepth">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.depth' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.depth" [formControlName]="formControlNames.DEPTH" class="form-control">
+      </div>
+    </div>
+    <div class="row" *ngIf="isDepth1">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.depth1' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.depth1" [formControlName]="formControlNames.DEPTH1" class="form-control">
+      </div>
+    </div>
+    <div class="row" *ngIf="isDepth2">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.depth2' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.depth2" [formControlName]="formControlNames.DEPTH2" class="form-control">
+      </div>
+    </div>
+
+    <div class="row" *ngIf="isHeight">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.height' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.height" [formControlName]="formControlNames.HEIGHT" class="form-control">
+      </div>
+    </div>
+    <div class="row" *ngIf="isFrameThickness">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.frameThickness' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.frameThickness" [formControlName]="formControlNames.FRAME_THICKNESS" class="form-control">
+      </div>
+    </div>
+    <div class="row" *ngIf="isTopFrontHeight">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.topFrontHeight' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.topFrontHeight" [formControlName]="formControlNames.TOP_FRONT_HEIGHT" class="form-control">
+      </div>
+    </div>
+    <div class="row" *ngIf="isBottomFrontHeight">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.bottomFrontHeight' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.bottomFrontHeight" [formControlName]="formControlNames.BOTTOM_FRONT_HEIGHT" class="form-control">
+      </div>
+    </div>
+
+    <div class="row" *ngIf="isFrontCount">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.frontCount' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.frontCount" [formControlName]="formControlNames.FRONT_COUNT" class="form-control">
+      </div>
+    </div>
+
+    <div class="row" *ngIf="isFrontWidth">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.frontWidth' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.frontWidth" [formControlName]="formControlNames.FRONT_WIDTH" class="form-control">
+      </div>
+    </div>
+    <div class="row" *ngIf="isShelfCount">
+      <div class="col-md-8 pt-2"><label>{{'furnitures.step3.shelfCount' | translate}}</label></div>
+      <div class="col-md-4">
+        <input type="number" step="1" appBootstrapErrors errorKeyParent="validationError.shelfCount" [formControlName]="formControlNames.SHELF_COUNT" class="form-control">
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <button (click)="back()" class="btn btn-outline-secondary  col-md-12">{{'furnitures.back'|translate}}</button>
+      </div>
+      <div class="col-md-3">
+        <button type="submit" class="col-md-12 btn btn-primary">{{'furnitures.next' | translate}}</button>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </form>
+
+</div>

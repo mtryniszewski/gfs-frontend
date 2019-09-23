@@ -1,0 +1,155 @@
+{
+  "validationError": {
+    "matchPassword": "Bad password",
+    "required": "Field is required.",
+    "email": "Provide a valid email address",
+    "accountNotActive": "Account is not active",
+      "max": "The maximum value is 100!",
+    "min": "The minimum value is 0!",
+    "endDateValid": "Bad end date value",
+    "name": {
+      "maxlength": "The name must contain at most 20 characters",
+      "required": "Field is required."
+    },
+    "surname": {
+      "maxlength": "The surname must contain at most 40 characters",
+      "required": "Field is required."
+    },
+    "password": {
+      "maxlength": "Password must be at least 6 characters long",
+      "matchPassword": "Bad password",
+      "required": "Field is required."
+    }
+  },
+  "global": {
+    "actions": "Actions",
+    "title": "Tesar Studio",
+    "send": "Send",
+    "save": "Save",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "archive": "Archive",
+    "problemWithConnection": "Problem with connection.",
+    "welcome": "Welcome, ",
+    "email": "Email",
+    "logout": "Logout",
+    "fieldIsRequired": "Field is required.",
+    "saveChanges": "Save changes",
+    "description": "Description",
+    "search": "Search",
+    "edition": "Edition",
+    "wrongLogin": "Wrong email",
+    "wrongPassword": "Wrong password",
+    "edit": "Edit",
+    "close": "Close",
+    "sure": "Are you sure?",
+    "back": "Back",
+    "backHome": "Home Page",
+    "details": "Details",
+    "projects": "Projects"
+  },
+  "auth": {
+    "password": "Password",
+    "repeatPassword": "Repeat password",
+    "login": {
+      "login": "Login",
+      "logIn": "Log in:",
+      "goToLogin": "Go to login"
+    },
+    "register": {
+      "register": "Register",
+      "firstName": "Name",
+      "surname": "Surname",
+      "userExists": "The user with the given email address already exists"
+    },
+    "resetPassword": {
+      "resetPassword": "Reset password",
+      "badPassword": "Bad password",
+      "wrongReset": "Wrong password"
+    },
+    "forgotPassword": {
+      "forgotPassword": "Forgot password.",
+      "wrongForgot": "Wrong email"
+    }
+  },
+  "user": {
+    "editUser": {
+      "editUser": "User edition",
+      "firstName": "Name",
+      "surname": "Surname",
+      "gitLogin": "Git login",
+      "slackName": "Slack name",
+      "changePassword": "Change password",
+      "password": "Password",
+      "oldPassword": "Old password",
+      "repeatPassword": "Password again",
+      "problemEditUser": "Problem with user editing",
+      "activateUser": "Account is active",
+      "deactivateUser": "Deactivate user",
+      "grantAdmin": "Administrator",
+      "revokeAdmin": "Revoke admin rights",
+      "archiveUser": "User in the archive",
+      "dearchiveUser": "Dearchive user",
+      "deleteUser": "Delete user",
+      "activateUserPrompt": "User activation will enable him to log into the system",
+      "deactivateUserPrompt": "Deactivating the user will prevent him from logging in to the system",
+      "grantAdminPrompt": "Giving administrator rights will allow the user to make changes to the key elements of the system",
+      "revokeAdminPrompt": "Revoking administrator rights will prevent the user from making changes to key system elements",
+      "archiveUserPrompt": "Moving the user to the archive will remove him from the list of active users",
+      "dearchiveUserPrompt": "Restoring the user from the archive activates it and places it on the list of active users",
+      "deleteUserPrompt": "Deleting a user will delete all his data from the system",
+      "dearchiveShort": "Restore"
+    },
+    "usersList": {
+      "usersList": "Users list",
+      "noContract": "No contract",
+      "search": "Search user",
+      "fullName": "User",
+      "admin": "Admin",
+      "active": "Active",
+      "manageContracts": "Manage contracts",
+      "editionUser": "Edition user",
+      "contracts": "Contracts",
+      "problemEditUser": "Problem with user editing",
+      "archiveUserList": "List of archival employees"
+    }
+  },
+  "nav": {
+    "youReport": "You report",
+    "report": {
+      "report": "Report",
+      "reportAccountancy": "accountancy",
+      "reportCompany": "company"
+    },
+    "projects": "Projects",
+    "employees": "Employees",
+    "archives": "Archives"
+  },
+  
+  "alertify": {
+    "success": {
+      "credentialChange": "Credentials were changed!",
+      "credentialChangeSignIn": "Credentials were changed. Sign in!",
+      "activateUser": "User activated!",
+      "deactivateUser": "User deactivated!",
+      "grantAdmin": "Admin rights granted!",
+      "revokeAdmin": "Admin rights revoked!",
+      "archiveUser": "User moved to archive!",
+      "dearchiveUser": "User removed from archive!",
+      "deleteUser": "User deleted!",
+      "mailSent": "Mail sent!",
+      "welcome": "Welcome to TimeTracker!",
+      "registerSuccess": "Account has been made!",
+      "reset": "Password changed!"
+    },
+    "error": {
+      "onPageSizeChangeMin": "Minimum rows in page: 5!",
+      "onPageSizeChangeMax": "Maximum rows in page: 30!",
+      "credentialsWrong": "Wrong credentials!"    
+    }
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next"
+  }
+}

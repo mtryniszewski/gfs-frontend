@@ -1,0 +1,137 @@
+<div class="container-fluid" [ngClass]='transparent' (mouseenter)="notransparent()" (mouseleave)="leave(); hidden();"
+  (scroll)="onWindowScroll($event)">
+  <div class="row">
+    <div class="col-3 px-0">
+      <app-sidebar>
+
+      </app-sidebar>
+    </div>
+    <div class="col-9 right ">
+      <div class="main w-100">
+        <h1 class="mt-5">Jak możemy pomóc?</h1>
+      </div>
+      <div>
+        <div class="accordion mx-auto" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" (click)="collapseOne=!collapseOne" type="button">
+                  <img src="../../../assets/plus.png">
+                  Jak założyć konto?
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" *ngIf="collapseOne">
+              <div class="card-body">
+                W celu założenia konta kliknij w <a [routerLink]="['/auth/register']" class="btn-link pl-0">{{'auth.register.signIn'
+                  | translate}}</a>. Po wypełnieniu formularza, zostanie wysłany link aktywujący konto na podany przy
+                rejestracji adres e-mail.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link" (click)="collapseTwo=!collapseTwo" type="button">
+                  <img src="../../../assets/plus.png">
+                  Dlaczego nie mogę się zalogować?
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseTwo" *ngIf="collapseTwo">
+              <div class="card-body">
+                Proszę sprawdzić, czy konto zostało aktywowane (kliknięcie w wygenerowany link wysłany na adres
+                e-mail).
+                W przypadku dalszych problemów proszę skontaktować się z administratorem.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link" (click)="collapseThree=!collapseThree" type="button">
+                  <img src="../../../assets/plus.png">
+                  Jak złożyć zamówienie?
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" *ngIf="collapseThree">
+              <div class="card-body">
+                W celu złożenia zamówienia wymagane jest zalogowanie się do systemu. Będąc zalogowanym w systemie
+                przechodzimy do zakładki: "Zamówienia". Po prawej stronie widnieje przycisk "Dodaj zamówienie".
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link" (click)="collapseFour=!collapseFour">
+                  <img src="../../../assets/plus.png">
+                  Dlaczego nie mogę pobrać dokumentu PDF?
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" *ngIf="collapseFour">
+              <div class="card-body">
+                Możliwość wygenerowania dokumentu PDF jest dostępna dopiero po zatwierdzeniu zamówienia. Należy
+                pamiętać,
+                że zatwierdzenie zamówienia uniemożliwi jego późniejszą modyfikację.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h5 class="mb-0">
+                <button class="btn btn-link" (click)="collapseFive=!collapseFive">
+                  <img src="../../../assets/plus.png">
+                  Dodałem zamówienie, co dalej?
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFive" *ngIf="collapseFive">
+              <div class="card-body">
+                Po dodaniu zamówienia można przystąpić do wybrania zamawianego mebla. Aby dodać do zamówienia pożądany
+                mebel, przechodzimy do zakładki "Szczegóły", która jest obok nazwy zamówienia.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h5 class="mb-0">
+                <button class="btn btn-link" (click)="collapseSix=!collapseSix">
+                  <img src="../../../assets/plus.png">
+                  Jak dodać mebel do zamówienia?
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSix" *ngIf="collapseSix">
+              <div class="card-body">
+                Będąc w zakładce "Szczegóły zamówienia", po lewej stronie mamy opcję: "Dodaj mebel". Po kliknięciu
+                ukaże
+                się formularz, który poprowadzi nas do samego końca dodania mebla.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h5 class="mb-0">
+                <button class="btn btn-link" (click)="collapseSeven=!collapseSeven">
+                  <img src="../../../assets/plus.png">
+                  Jak zatwierdzić zamówienie?
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSeven" *ngIf="collapseSeven">
+              <div class="card-body">
+                Jeśli dodaliśmy wszystkie meble, które chcieliśmy zamówić, przechodzimy do listy złożonych zamówień i
+                klikamy w przycisk "Zatwierdź". Potwierdzamy wybór.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>

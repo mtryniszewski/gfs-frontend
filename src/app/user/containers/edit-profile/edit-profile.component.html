@@ -1,0 +1,48 @@
+<div class="py-5">
+  <div class="container pt-5">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <h2 class="text-center">{{'user.editAccount' | translate}}</h2>
+        <div *ngIf="!getUserError">
+          <form [formGroup]="editForm" (ngSubmit)="onEditUserSubmit()">
+            <div class="form-group my-1">
+              <label>{{'global.name' | translate}}</label>
+              <input type="text" class="form-control" appBootstrapErrors errorKeyParent="validationError.name" [placeholder]="'global.name' | translate"
+                [formControlName]="formControlNames.NAME">
+            </div>
+            <div class="form-group my-1">
+              <label>{{'global.surname' | translate}}</label>
+              <input type="text" class="form-control" appBootstrapErrors errorKeyParent="validationError.surname" [placeholder]="'global.surname' | translate"
+                [formControlName]="formControlNames.SURNAME">
+            </div>
+           
+            <button [disabled]="!editForm.valid" type="submit" class="btn btn-primary">{{'global.saveChanges' | translate}}</button>
+            <button [routerLink]="['/user/orders/',this.getUserId()]"  type="button" class="btn btn-secondary ml-2">{{'global.back' | translate}}</button>
+            <div class="error">
+              <span *ngIf="invalidCredentials || editUserError">
+                <div class="alert alert-danger" role="alert">
+                  {{invalidCredentials ? ('user.problemEditUser' | translate) : ('global.common.problemWithConnection' | translate) }}
+                </div>
+              </span>
+            </div>
+          </form>
+          <div class="my-3">
+            <button class="btn btn-link" (click)="openChangePasswordModal();">{{'user.changePassword' | translate}}</button>
+          </div>
+          <div class="my-3">
+            <button class="btn btn-danger" (click)="openDeleteAccountModal();">{{'user.deleteAccount' | translate}}</button>
+          </div>
+          <div *ngIf="getUserError" class="alert alert-danger" role="alert">
+            {{'global.common.problemWithConnection' | translate}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+      
+      </div>
+    </div>
+  </div>
+</div>
+<app-change-password #changePassword></app-change-password>
+<app-delete-account #deleteAccount></app-delete-account>

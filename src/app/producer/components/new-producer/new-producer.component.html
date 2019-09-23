@@ -1,0 +1,39 @@
+<app-modal [id]="modalName">
+  <div class="modal-header">
+    <h5 class="modal-title">{{'producers.newProducer' | translate}}</h5>
+    <button type="button" class="close" (click)="closeModal();" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <form *ngIf="newProducerForm" [formGroup]="newProducerForm" (ngSubmit)="onFormSubmit()">
+    <div class="modal-body py-2">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="my-0">{{'producers.name' | translate}}</p>
+          <input type="text" class="form-control" appBootstrapErrors [formControlName]="formControlNames.NAME">
+        </div>
+        <div class="col-md-6">
+          <p class="my-0">{{'producers.city' | translate}}</p>
+          <input type="text" class="form-control" appBootstrapErrors [formControlName]="formControlNames.CITY">
+        </div>
+        <div class="col-md-6">
+          <p class="my-0">{{'producers.street' | translate}}</p>
+          <input type="text" class="form-control" appBootstrapErrors [formControlName]="formControlNames.STREET">
+        </div>
+        <div class="col-md-6">
+          <p class="my-0">{{'producers.email' | translate}}</p>
+          <input type="email" class="form-control" appBootstrapErrors [formControlName]="formControlNames.EMAIL">
+        </div>
+        <div class="col-md-6">
+          <p class="my-0">{{'producers.phoneNumber' | translate}}</p>
+          <input type="text" class="form-control" appBootstrapErrors [formControlName]="formControlNames.PHONE">
+        </div>
+     
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn text-white btn-primary">{{'global.save' | translate}}</button>
+      <button type="button" class="btn btn-secondary" (click)="closeModal();" data-dismiss="modal">{{'global.cancel' | translate}}</button>
+    </div>
+  </form>
+</app-modal>

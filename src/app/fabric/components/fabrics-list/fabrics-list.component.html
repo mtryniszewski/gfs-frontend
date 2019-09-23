@@ -1,0 +1,63 @@
+<div class="py-5">
+  <div class="container-fluid pt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="select">
+          <input type="text" [value]="searchQuery" [formControl]="fabricSearch" class="form-control" [placeholder]="'fabrics.fabricSearch' | translate">
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <h2 class="header-list">{{'fabrics.fabrics' | translate}}</h2>
+      </div>
+      <div class="col-md-3 text-right">
+        <button (click)="openNewFabricModal();" class="btn btn-success ml-1">{{'fabrics.add'|translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="">
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngIf="!hasFabrics()" class="alert alert-warning" role="alert">
+          {{'fabrics.fabricNotFound' | translate}}
+        </div>
+        <div *ngIf="hasFabrics()" class="table-responsive">
+          <table class="table table-md">
+            <thead>
+              <tr>
+                <th class="thead">{{'fabrics.producerCode' | translate}}</th>
+                <th class="thead ">{{'fabrics.name' | translate}}</th>
+                <th class="thead">{{'fabrics.producer' | translate}}</th>
+                <th class="thead">{{'fabrics.thickness' | translate}}</th>
+               
+                <th class="thead text-center"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let fabric of fabrics">
+                <td class="thead">{{fabric.producerCode}} </td>
+                <td class="thead">{{fabric.name}} </td>
+
+                <td class="thead">{{ fabric.producer.name}}</td>
+                <td class="thead">{{ fabric.thickness }} mm</td>
+                <td class="tbody nowrap text-right">
+                    <button (click)="openFabricPreviewModal(fabric);" class="btn btn-outline-secondary ml-1 btn-sm">{{'global.preview'|translate}}</button>
+                  <button (click)="openEditFabricModal(fabric);" class="btn btn-outline-primary ml-1 btn-sm">{{'global.edit'|translate}}</button>
+                  <button (click)="openArchiveFabricModal(fabric);" class="btn btn-outline-warning ml-1 btn-sm">{{'global.archive'|translate}}</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-pagination class="text-right" *ngIf="hasFabrics()" (changePagination)="onPaginationChange($event)" [itemsCount]="totalCount"></app-pagination>
+<app-new-fabric #newFabric></app-new-fabric>
+<app-edit-fabric #editFabric></app-edit-fabric>
+<app-archive-fabric #archiveFabric></app-archive-fabric>
+<app-fabric-preview #fabricPreview></app-fabric-preview>

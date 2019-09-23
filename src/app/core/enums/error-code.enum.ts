@@ -1,0 +1,20 @@
+export enum ErrorCodes {
+  UserNotFound,
+  WrongPassword,
+  AccountNotActive,
+  UserRegistrationFailed,
+  EmptyPassword,
+  ChangePasswordFailed,
+  EmptyToken,
+  OrderNotFound,
+  WrongFurnitureType,
+  WrongFrontCount,
+  FabricNotFound,
+  ProducerNotFound,
+  WrongDrawerType,
+  WrongDrawerConfiguration,
+  WrongActivationToken,
+  UserExists,
+  WrongEmail,
+  UnexpectedError
+  }
