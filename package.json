@@ -33,7 +33,7 @@
     "angular-wizard-form": "^0.4.1",
     "angular5-csv": "^0.2.10",
     "bootstrap": "^4.1.3",
-    "chart.js": "^2.5.0",
+    "chart.js": "^2.9.4",
     "core-js": "^2.5.4",
     "d3": "^5.5.0",
     "file-saver": "^2.0.0",
